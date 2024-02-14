@@ -7,7 +7,34 @@
     </head>
     <body>
         <h1>Cupcake store</h1>
-        <div id="my-ele"></div>
-        <script src="https://cheerful-gnome-93732c.netlify.app/assets/snippet.js"></script>
+        <!-- <div id="my-ele"></div>
+        <script src="https://cheerful-gnome-93732c.netlify.app/assets/snippet.js"></script> -->
+        <div>
+            <div
+                data-widget-id="widget-loc"
+                data-nl-component="nl-display-widget"
+                data-product-id="6789"
+            ></div>
+            <p><i>Widget will be placed above this text.</i></p>
+        </div>
+        <script>
+            (function (w, d, s, o, f, js, fjs) {
+                w["JS-Widget"] = o;
+                w[o] =
+                    w[o] ||
+                    function () {
+                        (w[o].q = w[o].q || []).push(arguments);
+                    };
+                (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+                js.id = o;
+                js.src = f;
+                js.async = 1;
+                fjs.parentNode.insertBefore(js, fjs);
+            })(window, document, "script", "mw", "./assets/snippet.js");
+            mw("init", {
+                elementList: document.querySelectorAll("[data-widget-id]"),
+                token: "1233thisisatoken",
+            });
+        </script>
     </body>
 </html>
