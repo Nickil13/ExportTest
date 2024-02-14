@@ -30,7 +30,13 @@
                 js.src = f;
                 js.async = 1;
                 fjs.parentNode.insertBefore(js, fjs);
-            })(window, document, "script", "mw", "./assets/snippet.js");
+            })(
+                window,
+                document,
+                "script",
+                "mw",
+                "https://cheerful-gnome-93732c.netlify.app/assets/snippet.js"
+            );
             mw("init", {
                 elementList: document.querySelectorAll("[data-widget-id]"),
                 token: "1233thisisatoken",
