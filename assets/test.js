@@ -1,9 +1,18 @@
 console.log("this is a test");
 
-let ele = document.getElementsById("my-ele");
+let ele = document.getElementById("my-ele");
 let button = document.createElement("button");
-button.title = "Testing";
-button.addEventListener(() => {
-    console.log("button clicked");
+button.textContent = "Testing";
+
+let iframe = document.createElement("iframe");
+iframe.src = "https://nickil13.github.io/ExportTest/";
+iframe.width = 200;
+iframe.height = 200;
+
+button.addEventListener("click", () => {
+    console.log("showing iframe");
+    ele.appendChild(iframe);
 });
-ele.appendChild(button);
+if (ele) {
+    ele.appendChild(button);
+}
